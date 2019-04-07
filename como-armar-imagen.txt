@@ -1,0 +1,12 @@
+Parado en este directorio ejecutar:
+
+docker image build -t <nombre-imagen> .
+
+IMPORTANTE: Al pensar como se va a armar la imagen utilizar el archivo .dockerignore para que el contexto desde
+el que se crea la imagen sea lo mas pequeño y exacto posible. Asi evitamos mandar a la imagen archivos que no
+deben estar ahi.
+
+
+Luego ejecutar:
+
+docker container run --name <nombre-contenedor> -p 8080:8080 <nombre-imagen>
